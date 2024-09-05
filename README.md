@@ -32,7 +32,7 @@ To Install your Lamp web server either:<br>
 <br>
 Download the <a href="https://github.com/CreativeWebLogic-Net/genie-linux/archive/refs/heads/main.zip">Zip</a> from GitHub.<br>
 Then execute the command:<br>
-"sudo unzip ./main.zip"<br>
+"sudo unzip ./main.zip ./"<br>
 <br>
 <br>
 Or just download the central script file [website-helper-install.sh](https://github.com/CreativeWebLogic-Net/genie-linux/blob/c532f190bbdf61e1430179214f5f2550efab4660/website-helper-install.sh)..<br>
