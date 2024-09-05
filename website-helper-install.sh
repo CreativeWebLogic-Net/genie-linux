@@ -2,7 +2,8 @@
 
 # Detect the Linux distribution
 
-
+echo "Linux Genie Lamp Install Script will detect your linux version then install the Web Server."
+echo "We will also Install the latest version of our CWLNet Website Helper, it will be installed in your web servers scripts root directory."
 
 if [[ -f /etc/os-release ]]; then
     source /etc/os-release
@@ -50,31 +51,52 @@ if [[ -f /etc/os-release ]]; then
 else
     echo "Unable to determine distribution."
 fi
-
+echo "Genie will create an original copy of Website Helper in your Home Diretory."
 cd ~
 VAR1="https://f005.backblazeb2.com/file/iCWLNet-Website-Assets/downloads/"
 VAR2="website-helper-${ID}-install.sh"
 VAR3="$VAR1$VAR2"
-wget "$VAR3"
+
+if [ -e "$VAR2" ]; then
+    echo "Your Linux Version Installer -> $FILE | already exists."
+else
+    wget "$VAR3"
+    if [ -e "$VAR2" ]; then
+        echo "Genie has downloaded your Linux version Installer Script."
+    else
+        echo "Genie cannot connect to main mirror, trying an alternate server."
+        VAR1="https://github.com/CreativeWebLogic-Net/genie-linux/blob/main/"
+        VAR3="$VAR1$VAR2"
+        wget "$VAR3"
+    fi
+fi
+
+
+
 sudo chmod 777 "$VAR2"
 sudo "./$VAR2"
-mkdir ./website-helper
-mv "$VAR2" ./website-helper
-cd ./website-helper
+DIRECTORY="./website-helper"
+if [ -d "$DIRECTORY" ]; then
+    echo "Your Original Website Helper Version in -> $DIRECTORY already exists."
+else
+    echo "Your Original Website Helper Version in -> $DIRECTORY has been created."
+    mkdir $DIRECTORY
+fi
 VAR2="website-helper.zip"
-VAR3="$VAR1$VAR2"
-wget "$VAR3"
+mv "$VAR2" $DIRECTORY
+cd $DIRECTORY
+
+if [ -e "$VAR2" ]; then
+    echo "Your Website Helper Archive ->$FILE already exists."
+else
+    
+    VAR3="$VAR1$VAR2"
+    echo "Your Website Helper Archive ->$VAR3 will be downloaded from the server."
+    wget "$VAR3"
+fi
+
 unzip "./$VAR2"
 cp -R ./* "$VARWEBDIR"
 
-# Generate the alias configuration lines
-PROJECT_PATH="$VARWEBDIR"
-ALIAS_NAME="composer"
-
-
-ALIAS_CONFIG="Alias /$ALIAS_NAME $PROJECT_PATH/vendor\n<Directory $PROJECT_PATH/vendor>\n    Options Indexes FollowSymLinks\n    AllowOverride None\n    Require all granted\n</Directory>"
-
-# Append the configuration to the Apache file
-echo -e "$ALIAS_CONFIG" | sudo tee -a /etc/apache2/apache2.conf
 # Print a summary
-echo "Script execution completed."
+echo "Genie Lamp Server created, CWLNet Website Helper Installed To main Apache Scripts Document Root."
