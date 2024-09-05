@@ -7,6 +7,7 @@ These are the components installed:<br>
   MySQL<br>
   PHP<br>
   Adminer SQL Web Interface<br>
+  CWLNet's Website Helper PHP | CMS / Framework<br>
 <br>
 The script was created for these versions of Linux:<br>
 <br>
