@@ -28,7 +28,15 @@ Why did I create this? Because the number of times I have had to reinstall serve
 So I made these scripts just get the basics done and dusted..<br>
 <br>
 <br>
-To Install your Lamp web server just download the Zip from GitHub or just the central script file "website-helper-install.sh"..<br>
+To Install your Lamp web server either:<br>
+<br>
+Download the <a href="https://github.com/CreativeWebLogic-Net/genie-linux/archive/refs/heads/main.zip">Zip</a> from GitHub.<br>
+Then execute the command:<br>
+"sudo unzip ./main.zip"<br>
+<br>
+<br>
+Or just download the central script file "website-helper-install.sh"..<br>
+
 On the command line execute the script:<br>
 First make the file executable.<br>
 "sudo chmod +x ./website-helper-install.sh"<br>
