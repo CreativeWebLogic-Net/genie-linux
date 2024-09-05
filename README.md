@@ -27,7 +27,7 @@ Why did I create this? Because the number of times I have had to reinstall serve
 So I made these scripts just get the basics done and dusted..<br>
 <br>
 <br>
-To Install your Lamp web server just download the Zip from GitHub or just the script file "website-helper-install.sh"..<br>
+To Install your Lamp web server just download the Zip from GitHub or just the central script file "website-helper-install.sh"..<br>
 On the command line execute the script:<br>
 First make the file executable.<br>
 "sudo chmod +x ./website-helper-install.sh"<br>
