@@ -1,4 +1,4 @@
-# genie-linux
+# Genie Linux Install
 Genie is a Bash script to install the most popular web server used currently online.<br>
 These are the components installed:<br>
 <br>
