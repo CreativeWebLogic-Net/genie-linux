@@ -35,3 +35,8 @@ First make the file executable.<br>
 Then run it.<br>
 "sudo ./website-helper-install.sh"..<br>
 Thats all you need to do.<br>
+<br>
+The Website Helper Software is in a Beta Version, but hopefully soon it will manage the server hosting work in built,<br>
+everything from domain names to the server control panel like Plesk / CPanel.<br>
+It will also run on your local development servers and VM's. It should also connet through different deployment systems like Docker / Composer / Yum / etc..<br>
+So god help it will mean this install script id basically the only thing needed for a fresh Linux Server Install..<br>
