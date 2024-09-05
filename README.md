@@ -1,2 +1,2 @@
 # genie-linux
-Setup Lamp on your Linux Server
+Genie is a Bash script forSetup Lamp on your Linux Server
