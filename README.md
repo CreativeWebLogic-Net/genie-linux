@@ -35,7 +35,7 @@ Then execute the command:<br>
 "sudo unzip ./main.zip"<br>
 <br>
 <br>
-Or just download the central script file <a href='blob:https://github.com/fd4de817-4b03-4167-8bab-db18384fd9c5'>website-helper-install.sh</a>..<br>
+Or just download the central script file [website-helper-install.sh](https://github.com/CreativeWebLogic-Net/genie-linux/blob/c532f190bbdf61e1430179214f5f2550efab4660/website-helper-install.sh)..<br>
 <br>
 Next On the command line execute the script:<br>
 First make the file executable.<br>
