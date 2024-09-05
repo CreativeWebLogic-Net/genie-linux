@@ -1,6 +1,7 @@
 # genie-linux
 Genie is a Bash script to install the most popular web server used currently online.<br>
 These are the components installed:<br>
+<br>
   Apache2<br>
   Sqlite3<br>
   MySQL<br>
@@ -8,6 +9,7 @@ These are the components installed:<br>
   Adminer SQL Web Interface<br>
 <br>
 The script was created for these versions of Linux:<br>
+<br>
   ubuntu<br>
   centos<br>
   debian<br>
